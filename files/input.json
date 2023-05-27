@@ -1,0 +1,123 @@
+{
+    "settings": {
+        "auto": true,
+        "save_csv_summary": false,
+        "save_csv_details": false,
+        "save_csv_y_matrix": false,
+        "activate_ga": false,
+        "hide_prints": true,
+        "repeats": 2,
+        "inputs": [
+            "glpso_ex",
+            "ba_ex"
+        ]
+    },
+    "w_parameters": {
+        "a": {
+            "w_v": 0.729,
+            "w_g": 1.494,
+            "w_l": 1.494
+        },
+        "a_mod": {
+            "w_v": [0.5, 1],
+            "w_g": [0.5, 1.5],
+            "w_l": [0.5, 1.5]
+        },
+        "b": {
+            "w_v": 0.6,
+            "w_g": 1.7,
+            "w_l": 1.7
+        },
+        "c": {
+            "w_v": [0.4, 0.9],
+            "w_g": [0.5, 2.5],
+            "w_l": [0.5, 2.5]
+        }
+    },
+    "glpso_a": {
+        "function": "f11",
+        "population": 50,
+        "dimension": 30,
+        "pm": 0.05,
+        "w_set": "a",
+        "levy": false
+    },
+    "ba_a": {
+        "function": "f11",
+        "population": 50,
+        "dimension": 15,
+        "levy": false,
+        "parameters": {
+            "freq_range": [0.0, 2.0],
+            "mod_r": 0.8,
+            "mod_A": 0.9
+        }
+    },
+    "glpso_a_levy": {
+        "function": "f11",
+        "population": 50,
+        "dimension": 30,
+        "pm": 0.05,
+        "w_set": "a",
+        "levy": true
+    },
+    "ba_a_levy": {
+        "function": "f11",
+        "population": 50,
+        "dimension": 15,
+        "levy": true,
+        "parameters": {
+            "freq_range": [0.0, 2.0],
+            "mod_r": 0.8,
+            "mod_A": 0.9
+        }
+    },
+    "glpso_a_mod": {
+        "function": "f11",
+        "population": 50,
+        "dimension": 30,
+        "pm": 0.05,
+        "w_set": "a_mod",
+        "levy": false
+    },
+    "ba_ex": {
+        "function": "f1",
+        "population": 50,
+        "dimension": 15,
+        "levy": true,
+        "parameters": {
+            "freq_range": [0.0, 2.0],
+            "mod_r": 0.8,
+            "mod_A": 0.9
+        }
+    },
+    "glpso_ex": {
+        "function": "f1",
+        "population": 50,
+        "dimension": 30,
+        "pm": 0.05,
+        "w_set": "a_mod",
+        "levy": true
+    },
+    "lcso_ex": {
+        "function": "f1",
+        "population": 100,
+        "dimension": 30,
+        "no_swarms": 20,
+        "velocity_magnitude": 1e-3
+    },
+    "pso_e": {
+        "function": "f10",
+        "population": 50,
+        "dimension": 20,
+        "w_set": "a",
+        "alternative": true
+    },
+    "pso_f11": {
+        "function": "f11",
+        "population": 50,
+        "dimension": 20,
+        "w_set": "a",
+        "iterations": 200
+    }
+}
